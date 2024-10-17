@@ -1,0 +1,136 @@
+
+/* CSS3: ex: 'background-color: var(--red);' */
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+    display: inline;
+}
+
+body, h1, h2, h2 a, h2 a:visited, h3, h4, h5, h6, p, select, textarea {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Rambla', sans-serif;
+    /*font-size: 16px;*/
+    font-size: 1.6rem;
+    line-height: 1.325;
+    overflow-x: hidden;
+    max-width: 720px;  
+    border: 0 solid #DDDDDD;
+    padding: 0;
+    margin: 10px auto;
+    clear: both;
+    overflow: hidden;
+    height: 100%;
+    /*top: -15px;*/   /* Why? */
+    position: relative;
+    /*box-shadow: 0 0 30px rgb(20 20 20), inset 0 0 120px #b28818; iframe only */ /* #b28818 Tan*/
+}
+
+.preview-list {
+    width: auto;
+    display: block;
+    max-width: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.body-home {
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+    position: absolute;
+    box-shadow: 0 0 30px rgb(20 20 20), inset 0 0 120px #b28818;  /* #b28818 Tan*/
+}
+
+.body-home .preview-list {
+    max-width: 680px;
+    margin: 20px auto;
+    padding: 0 3px 0 3px;
+    position: relative;
+}
+
+.preview-list b {
+    color: navy;
+}
+
+.preview-list summary a {
+    text-decoration: none;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+	display: grid;    /* Center vertically */
+    min-width: 40px;
+	align-items: center;   
+    text-align: center;
+}
+
+.preview-list summary a:visited {
+    color: forestgreen;
+  /*text-decoration-color: hotpink;*/
+}
+
+.preview-list section {
+    margin: 0 5px 0 5px; 
+    overflow: hidden;    
+}
+
+.preview-list span {
+    display: block;
+    max-width: 90%;
+}
+
+.preview-list li {
+    list-style-type: none;
+}
+
+details {
+    position: relative;  /* To position the button within the summary */
+}
+
+summary {
+    list-style: none;    /* Remove default marker */
+    background: LightCyan;
+    position: relative;  /* Create positioning context for the button */
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Hide the default arrow (if needed) */
+}
+
+.preview-list details[open] summary a {
+    display: none; 
+}
+
+.preview-list section a, .preview-list section a:visited {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    display: block;  /* Gradient will be applied to the text */
+    
+    background: -webkit-linear-gradient(top,#000 20%, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 923px) {
+    .body-home .preview-list {
+        top: 66px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+	.body-home .preview-list  {
+       /*top: 92px;*/     
+    }  
+}

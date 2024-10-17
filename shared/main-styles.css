@@ -1,0 +1,278 @@
+
+
+/* https://www.w3schools.com/tags/ref_colornames.asp */
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+    display: block;
+    
+background-color: #269;
+background-image: linear-gradient(@light-grey 2px, transparent 2px),
+    linear-gradient(90deg, @light-grey 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;    
+}
+
+body, h1, h2, h2 a, h2 a:visited, h3, h4, h5, h6, p, select, textarea {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    /*background: #DDB38D url(timages/123.jpg) top repeat;*/  /* #DDB38D */
+    background: #FFFFFF;
+    color: #333333;
+    font-family: 'Rambla', sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.325;
+    overflow-x: hidden;
+    max-width: 1126px;
+    border: 0 solid #DDDDDD;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+	/*overflow: hidden;*/  /* No site scrolling with that! */
+    box-shadow:0 0 8px 0 rgba(0,0,0,.4), inset 0 0 120px #b28818;  /* #b28818(DarkGoldenRod) GoldenRod Peru*/ 
+}
+
+.site-header {
+    min-height: 132px;  /* IMPORTANT: Defines the site header height */
+    border: 0 solid #DDDDDD;
+    clear: both;
+    display: inline;
+    position: relative;
+}
+
+.site-footer {
+    background: #57485C;  /* Indigo*/
+    border-top: 2px solid #DDDDDD;  /* 2px */
+    overflow: hidden;
+    position: relative;
+    /*display: block;*/
+    clear: both;
+}
+
+.site-footer .wrap {
+    margin: 0 auto;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.site-header .wrap {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.site-header .widget-ad-area {
+    font-family: 'Rambla', sans-serif;
+    font-size: 14px;
+    /*color: #b0aabb; */
+    height: 85px;
+    padding-top: 15px;
+    width: 630px;
+    padding: 10px 0 0;
+    float: right;
+    text-align: left;
+}
+
+.widget-ad-area {
+    margin: 10px 10px 0 0px;
+	display: none;  /* Not needed for now */
+}
+
+.site-footer p {
+    color: #B5B5B5;
+    font-family: 'Rambla', sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* Why??? */
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.title-area {
+    background: url(icon132.png) left top no-repeat;
+    min-height: inherit; /* Why nothing is inherited from the parent automatically? */
+    float: left;
+}
+
+.site-title {
+    font-family: 'Rambla', sans-serif;
+    font-size: 28px;
+    color: blue;
+    text-align: left;   
+    padding: 10px 0 0 118px;
+}
+.site-description {
+    font-family: 'Rambla', sans-serif;
+    font-size: 28px;
+    color: FireBrick;
+    text-align: left;   
+    padding: 0 0 0 125px;
+}
+
+.nav-primary {
+    z-index: 10;
+    pointer-events: none; /* Allow access to content headers under it (hamburgers) */
+    box-shadow: 0 3px 5px 0 rgb(143 115 62 / 41%);
+    position: absolute;
+    background: none;
+    /*background: transparent;*/
+    border: 2px solid #78647F;
+    border-left: 0;
+    border-right: 0;
+    /*margin: 0 auto;*/
+    font-family: 'Francois One', sans-serif;
+    line-height: 1em;
+    float: top;
+    width: 100%;
+    /*clear: both;*/
+}
+
+.menu-primary {
+    margin: 0 auto;
+    padding: 0;
+    float: none;
+    overflow: hidden;
+    font-size: 2.1rem;
+    display: table;
+    background: yellow;    /* See box-shadow transition to gold in the label */
+    pointer-events: auto;  /* Restore to be usable (disabled in the parent) */
+    clear: both;
+}
+
+.menu-primary li a:active, .menu-primary li a:hover {
+    background: #B1C8A4;  /* When hovering */
+    color: #594A5E;
+    text-decoration: none;
+}
+
+.menu-primary input[type="radio"] {
+    display: none;
+}
+
+.menu-primary label input[type="radio"]:checked + a {
+    background-color: DeepSkyBlue;  /* When selected */
+    color: green;            /* To match the background */
+}     
+
+.menu-primary label {
+    display: inline-block;    
+    cursor: pointer;  
+    border-left: 1px solid gold; /*#e3e0d5;  blue;*/
+    border-right: 1px solid gold;
+    box-shadow: inset 0px -9px 7px gold;
+}
+
+a, button, input:focus, input[type="button"], input[type="reset"], input[type="submit"], textarea:focus, .button {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-primary li {
+    float: left;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.menu-primary a {
+    text-decoration: none;
+    border-bottom: none;
+    background: none;
+    padding: 5px 15px;
+    color: #78647F;  /* color: inherit; */
+    display: block;
+    position: relative;
+}
+
+/*.menu-primary li a:focus {
+    background-color: red;
+}*/
+
+.menu-primary li a:target {
+    background-color: blue;
+}
+
+/* To keep width of site-content constrained */
+.wrap-nav-content {
+    min-height: auto; 
+    position: relative;
+    clear: both;
+}
+
+.sidebar-ad-area {
+	width: 200px;
+	min-width: 200px;
+	min-height: 800px;
+	z-index: 5;
+	position: absolute;	
+    background: rgba(226, 205, 158, .25);
+    border-left: 2px solid #b1b1b1;
+    box-shadow: inset 0px 0px 80px rgb(226 205 158 / 65%), inset 12px 12px 20px -10px rgb(70 40 0 / 80%);
+    border-radius: 0 0 0 12px;
+    padding-bottom: 50px;
+    margin-bottom: -10px;
+	color: #737373;
+    font-family: 'Rambla', sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;	
+	float: right;
+	clear: both;
+	display: inline;
+    right: 0;
+    top: 30px;  /* NOTE: For min NAV height only! */
+}
+
+#site-content {
+    width: 100%; 
+    min-width: 100%;  /* Full width of 'body' */
+    min-height: 2000px;  /* Not less, prevents sidebar hiding */ /* Need to SYNC with CONTENT:.wrap-sidebar-content */ /* Should be enough for most content */
+    padding: 0;
+    margin: 0;
+    background: white;
+    border: none; /* Removes the border */
+    overflow: hidden; /* Prevents scrollbars */
+    box-shadow: none; /* Removes any shadow */
+    position: relative;
+    z-index: 0;
+    margin-bottom: -10px;  /* Why? */
+}
+
+/* Must be at bottom to override any styles */
+@media only screen and (max-width: 1141px) {
+    .sidebar-ad-area {
+        display: none;
+    }
+    .menu-wrap {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media print {
+    /* Chrome already have an option to disable the header and footer */
+    .site-header, .site-footer, .nav-primary, .sidebar-ad-area {
+        display: none;
+    }  
+    
+    body, .site-container {
+        box-shadow: none;
+        background: none;
+    }
+}

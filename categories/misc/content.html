@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contents</title>
+  <link rel="stylesheet" href="/shared/content-styles.css"> 
+  <script type="text/javascript" src="/shared/resize.js"></script>
+<!-- <style></style>  -->
+</head>
+<body class="site-contents" onload="RestoreStateR()">
+
+<input type="radio" name="rham" id="hri-hidden-left"/>
+<input type="radio" name="rham" id="hri-hidden-right"/>
+<input type="radio" name="rham" id="hri-left"/>
+<input type="radio" name="rham" id="hri-right"/>
+<label for="hri-left" class="hamburger-left" id="hamburger-left" tabindex="-1" onblur="this.ownerDocument.getElementById('hri-hidden-left').checked = true">☰</label>
+<label for="hri-right" class="hamburger-right" id="hamburger-right" tabindex="-2" onblur="this.ownerDocument.getElementById('hri-hidden-right').checked = true">☰</label>
+<label for="hri-hidden-left" class="hamburger-hide-left" id="hamburger-hide-left" tabindex="-3"></label>
+<label for="hri-hidden-right" class="hamburger-hide-right" id="hamburger-hide-right" tabindex="-4"></label>
+
+<!-- ***** Panel + Contents ***** -->
+<section class="wrap-sidebar-content" id="wrap-sidebar-content">
+<!-- ***** Contents menu ***** -->
+<aside class="sidebar-content" id="sidebar-content">
+<div class="wrap-contents">
+<ul class="menu-content" id="menu-content">
+    <li><details><summary>Group 1</summary><ul class="menu-group">
+      <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-03-29-0" href="pages/pageG1P1.html">Post 1</a></label></li>
+      <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-03-28-0" href="pages/pageG1P2.html">Post 2</a></label></li>
+      <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-03-27-0" href="pages/pageG1P3.html">Post 3 gjg khkjh kj hkjh kjh xy lkjh l hlh lkhlkhlkhl</a></label></li>
+    </ul></details></li>
+    <li><details><summary>Group 2</summary><ul class="menu-group">
+      <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-02-29-0" href="pages/pageG2P1.html">Post 1</a></label></li>
+      <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-02-23-0" href="pages/pageG2P2.html">Post 2</a></label></li>
+      <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-01-20-0" href="pages/pageG2P3.html">Post 3</a></label></li>
+    </ul></details></li>
+    <li><hr /></li>
+    <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-03-25-1" href="pages/page1.html">Post 1</a></label></li>     
+    <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-03-25-2" href="pages/page2.html">Post 2</a></label></li>
+    <li><label id="pgroup"><input type="radio" name="scat"/><a target="page-content" onclick="this.previousSibling.click()" id="page-2024-03-25-3" href="/LoremIpsum.htm">Post 3</a></label></li>   
+</ul>
+</div>
+</aside>
+
+<!-- ***** The category contents ***** -->
+<iframe name="page-content" id="page-content" scrolling="no" src="/shared/recent.html" onload="FixContentHeight(this)"></iframe>   <!-- about:blank -->
+</section>  
+
+</body>
+</html>

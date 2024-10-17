@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Hamburger Menu</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+  }
+  .hamburger {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .side-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #444;
+    color: white;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  .side-panel.left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  .side-panel.right {
+    right: 0;
+    transform: translateX(100%);
+  }
+  .side-panel.open {
+    transform: translateX(0);
+  }
+  @media (max-width: 768px) {
+    header {
+      justify-content: flex-start;
+    }
+    .hamburger.right {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="hamburger left" onclick="togglePanel('left')">&#9776;</div>
+  <h1>My Website</h1>
+  <div class="hamburger right" onclick="togglePanel('right')">&#9776;</div>
+</header>
+
+<div class="side-panel left" id="leftPanel">
+  <h2>Left Panel</h2>
+  <p>Some content here...</p>
+</div>
+<div class="side-panel right" id="rightPanel">
+  <h2>Right Panel</h2>
+  <p>Some content here...</p>
+</div>
+
+<div class="main-content">
+  <h2>Main Content</h2>
+  <p>This is the main content area.</p>
+</div>
+
+<script>
+  function togglePanel(side) {
+    const panel = document.getElementById(side + 'Panel');
+    panel.classList.toggle('open');
+  }
+</script>
+</body>
+</html>

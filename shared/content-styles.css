@@ -1,0 +1,342 @@
+
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+    display: block;
+}
+
+body, h1, h2, h2 a, h2 a:visited, h3, h4, h5, h6, p, select, textarea {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Rambla', sans-serif;
+    /*font-size: 16px;*/
+    font-size: 1.6rem;
+    line-height: 1.325;
+    /*overflow-x: hidden;*/
+    overflow: hidden;
+    max-width: 1126px;  
+    border: 0 solid #DDDDDD;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgb(20 20 20), inset 0 0 120px #b28818;  /* #b28818 Tan*/
+}
+
+.hamburger-left {
+    margin: 0 0 0 5px;
+    float: left;
+}
+
+.hamburger-right {
+    margin: 0 5px 0 0;
+    float: right;
+}
+
+.sidebar-content {
+    width: 200px;
+	max-width: 200px;
+    position: relative;
+    background: rgba(247, 238, 218, 0);
+    border-right: 1px solid #b1b1b1;
+    /*padding: 3px 0px 50px 0;*/
+    box-shadow: inset 0px 0px 80px rgba(226, 205, 158, .65), inset -12px 12px 20px -10px rgba(70, 40, 0,.8);
+    border-radius: 0 0 12px 0;
+    color: #737373;
+    font-family: 'Rambla', sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    float: left;
+    display: inline;
+}
+
+.menu-content li a:active, .menu-content li a:hover {
+    background: #B1C8A4;
+    color: #594A5E;
+    text-decoration: none;
+}
+
+.menu-content label input[type="radio"]:checked + a {
+    background-color: Gold;
+    color: green;
+}
+
+.menu-content label {
+    display: inline-block;    
+    cursor: pointer;  
+}
+
+.menu-content li {
+    list-style-type: none;
+}
+
+.menu-content summary {
+    background: green; 
+}
+
+.menu-content a {
+    text-decoration: none;
+    border-bottom: none;
+    background: none;
+    color: #78647F;  /* color: inherit; */
+    display: block;
+    position: relative;
+}
+
+.menu-content a:visited {
+    color: DeepSkyBlue;
+}
+
+.menu-content, .menu-group {
+    padding: 0 5px 0 5px;  /* Control item`s indent */
+}
+
+a, button, input:focus, input[type="button"], input[type="reset"], input[type="submit"], textarea:focus, .button {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Full width on mobile devices */
+#page-content {
+    width: 100%;
+    max-width: 720px;
+    min-height: 2000px; /* Must enlarge wrap-sidebar-content height if higher */ /* Need SYNC! */
+    position: relative;
+    margin: 0 0 -5px 2px;
+    border: none; /* Removes the border */
+    overflow: hidden; /* Prevents scrollbars */
+    box-shadow: none; /* Removes any shadow */
+    margin-bottom: 30px;  /* Compensate for the header offset */
+    background: transparent;  /* rgba(255, 255, 255, 0) */
+}
+
+details summary {
+    cursor: pointer;  
+}
+
+.wrap-sidebar-content {
+    top: 30px;
+    position: relative;
+    display: block; 
+    min-height: auto;   
+	overflow: hidden;
+}
+
+#hamburger-hide-left, #hamburger-hide-right {
+    min-height: 34px;
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
+    position: fixed; 
+    display: none;
+    top: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#hamburger-hide-left {
+    float: left;
+    left: 0;
+    display: none; 
+}
+
+#hamburger-hide-right {
+    float: right;
+    right: 0;
+    display: none; 
+}
+
+#hamburger-left, #hamburger-right {
+	font-size: 26px;  
+    cursor: pointer; 
+    position: relative;  /* Required to be above hamburger-hide and receive input */  
+	display: none; 
+}
+
+input[type="radio"] {
+    display: none;
+}
+    
+/* Must be at bottom to override any styles */
+@media only screen and (max-width: 1124px) {
+    #page-content {
+       position: relative;  
+       width: 100%; 
+    }     
+}   
+
+@media only screen and (max-width: 923px) {
+    
+    /* The width is animated. Unknown if at left or right. */
+    .sidebar-content {
+       z-index: 10;
+       display: inline;
+       position: fixed;
+       overflow: hidden;  /* To hide wrap-contents which have constant width */
+       display: block; /* Prevents width animation! */
+       width: 0; /* To animate it to 200px later */
+       opacity: 0.0;
+       visibility: hidden; /* To hide the border */
+    } 
+    
+    /* Keeps constant width to prevent menu-content from resizing when sidebar-content is animated */
+    .wrap-contents {
+       min-width: 200px;
+       max-width: 200px;   
+       background: transparent;
+       position: relative;  /* Relative to sidebar-content */
+       top: 0;
+       left: 0;    
+    } 
+    
+    .menu-content {
+       /*position: relative; */   
+      text-align: left; 
+    }
+    
+    .wrap-sidebar-content {
+       top: -6px;      /* Why? */     
+       min-width: 100%;
+       display: block;
+       text-align: center;
+    }
+    
+    #hamburger-hide-left, #hamburger-hide-right { 
+       display: inline;
+    }
+    
+	#hamburger-left, #hamburger-right {
+       z-index: 10; 
+	   display: inline;	
+	}   
+    
+    #hamburger-hide-left:active, #hamburger-hide-right:active, .hamburger-left:active ~ #hamburger-hide-left, .hamburger-right:active ~ #hamburger-hide-right {
+       background: Tan;
+    }
+    
+	#page-content {
+       display: inline;
+       position: relative;
+       width: 99%;  
+	}
+    
+    #hri-left:checked ~ .hamburger-left, #hri-right:checked ~ .hamburger-right {
+       pointer-events: none; 
+       /*background: aqua;*/       
+    }   
+    
+    /* Opening, when shown by hamburger (left) */
+    .hamburger-left:focus ~ .wrap-sidebar-content > .sidebar-content, 
+     #hri-left:checked ~ .wrap-sidebar-content > .sidebar-content:hover, 
+     #hri-hidden-left:checked ~ .wrap-sidebar-content > .sidebar-content:hover {
+       z-index: 10;
+       display: inline;
+       position: fixed;
+       background: red;
+       visibility: visible;
+       float: left;
+       left: 0;
+       width: 200px;
+       opacity: 1.0;
+       transition: width 0.2s, opacity 0.3s;
+    }
+    
+    /* Opening, when shown by hamburger (left) */
+    .hamburger-right:focus ~ .wrap-sidebar-content > .sidebar-content, 
+     #hri-right:checked ~ .wrap-sidebar-content > .sidebar-content:hover, 
+     #hri-hidden-right:checked ~ .wrap-sidebar-content > .sidebar-content:hover {
+       z-index: 10;
+       display: inline; 
+       position: fixed;
+       background: Magenta;
+       visibility: visible;
+       float: right;    
+       right: 0;
+       border-left: 1px solid #b1b1b1;
+       box-shadow: inset 0px 0px 80px rgb(226 205 158 / 65%), inset 12px 12px 20px -10px rgb(70 40 0 / 80%);
+       border-radius: 0 0 0 12px;
+       width: 200px;
+       opacity: 1.0;
+       transition: width 0.2s, opacity 0.3s;     
+    }    
+    
+    /* Closing left */
+    .hamburger-hide-left:active ~ .wrap-sidebar-content > .sidebar-content, 
+     #hri-hidden-left:checked ~ .wrap-sidebar-content > .sidebar-content:not(:hover), 
+     #hri-left:checked ~ .hamburger-left:not(:focus) ~ .wrap-sidebar-content > .sidebar-content:not(:hover) {
+       z-index: 10;
+       display: inline;
+       position: fixed;
+       background: blue;
+       visibility: visible;
+       float: left;
+       left: 0;
+       width: 0;
+       opacity: 0.0;
+       transition: width 0.3s, opacity 0.3s;        
+    }
+       
+    /* Closing right */   
+    .hamburger-hide-right:active ~ .wrap-sidebar-content > .sidebar-content, 
+     #hri-hidden-right:checked ~ .wrap-sidebar-content > .sidebar-content:not(:hover), 
+     #hri-right:checked ~ .hamburger-right:not(:focus) ~ .wrap-sidebar-content > .sidebar-content:not(:hover) {
+       z-index: 10;
+       display: inline; 
+       position: fixed;
+       background: blue;
+       visibility: visible;
+       float: right;    
+       right: -1px;   /* -1 To consume the border */
+       border-left: 1px solid #b1b1b1;
+       box-shadow: inset 0px 0px 80px rgb(226 205 158 / 65%), inset 12px 12px 20px -10px rgb(70 40 0 / 80%);
+       border-radius: 0 0 0 12px;
+       width: 0;
+       opacity: 0.0;
+       transition: width 0.3s, opacity 0.3s;        
+    }    
+   
+}
+/* Is there a better way? Rely on JS for now. */
+@media only screen and (max-width: 830px) {
+	.wrap-sidebar-content {
+       top: 21.5px; 
+    }  
+}
+
+@media only screen and (max-width: 500px) {
+	.wrap-sidebar-content {
+       top: 48px;
+    }  
+}
+
+@media only screen and (max-width: 370px) {
+	.wrap-sidebar-content {
+       top: 73.5px;
+    }  
+}
+
+@media print {
+    #sidebar-content, #hamburger-left, #hamburger-right, #hamburger-hide-left, #hamburger-hide-right {
+       display: none;
+    }
+    
+    body {
+       box-shadow: none;
+       background: none;
+    }
+    
+}
+
